@@ -1,0 +1,21 @@
+:root {
+  --color-primary: #9d399a;
+  --color-secondary: #424242;
+  --color-accent: #57ff29;
+  --color-bg: #fff;
+  --color-text: #1a1a1a;
+  --shadow: 0 2px 20px 0 rgba(33,33,33,.05);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

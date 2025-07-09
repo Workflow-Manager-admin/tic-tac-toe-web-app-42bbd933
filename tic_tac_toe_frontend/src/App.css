@@ -1,0 +1,115 @@
+.ttt-app-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+  padding: 0 12px;
+}
+.ttt-title {
+  margin: 2.5rem 0 1rem 0;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+.ttt-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  justify-content: center;
+}
+.ttt-select, .ttt-restart {
+  background: var(--color-secondary);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  padding: 0.55em 1.1em;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.ttt-select:focus, .ttt-restart:focus {
+  outline: 2px solid var(--color-accent);
+}
+.ttt-restart {
+  background: var(--color-accent);
+  color: var(--color-secondary);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: background .18s;
+}
+.ttt-restart:hover {
+  background: #38e210;
+}
+.ttt-centerer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 288px;
+  margin-bottom: 1.4rem;
+  width: 100%;
+}
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, clamp(74px, 20vw, 104px));
+  grid-template-rows: repeat(3, clamp(74px, 20vw, 104px));
+  gap: 0.7rem;
+  background: var(--color-secondary);
+  border-radius: 12px;
+  padding: 0.7rem;
+  box-shadow: var(--shadow);
+}
+.ttt-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  background: #fff;
+  color: var(--color-primary);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.15s, color 0.2s;
+  min-width: 72px;
+  min-height: 72px;
+  user-select: none;
+}
+
+.ttt-cell:disabled {
+  background: #e9e9e9;
+  color: #dedede;
+  cursor: not-allowed;
+}
+.ttt-cell:not(:disabled):active {
+  background: var(--color-accent);
+  color: var(--color-secondary);
+}
+.ttt-status {
+  margin-top: 0.4rem;
+  font-size: 1.17rem;
+  color: var(--color-secondary);
+  text-align: center;
+  min-height: 36px;
+}
+
+@media (max-width: 600px) {
+  .ttt-title {
+    font-size: 1.6rem;
+  }
+  .ttt-board {
+    gap: 0.35rem;
+    padding: 0.4rem;
+    border-radius: 6px;
+  }
+  .ttt-cell {
+    min-width: 46px;
+    min-height: 46px;
+    font-size: 1.3rem;
+  }
+  .ttt-status {
+    font-size: 1.01rem;
+    min-height: 32px;
+  }
+}
